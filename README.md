@@ -7,7 +7,7 @@
 头部UIView * navBarView 图片控件UIImageView* topView; 标题控件 UILabel * titleLabel; 表格控件UITableView * tableView;
 
 初始化表格
- _tableView = ({
+  _tableView = ({
         UITableView * tb = [[UITableView alloc] initWithFrame: CGRectMake(0, 0, kScreenWidth, kScreenHeight) style: UITableViewStylePlain];
         [self.view addSubview: tb];
         tb.delegate = self;
@@ -19,7 +19,7 @@
     });
     
 
- [_tableView registerClass: [TableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier: NSStringFromClass([TableViewHeaderFooterView class])];
+  [_tableView registerClass: [TableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier: NSStringFromClass([TableViewHeaderFooterView class])];
    _topView = ({
         UIImageView * imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"apic16896.jpg"]];
         imageView.frame = CGRectMake(0, -40, kScreenWidth, TOPIMAGEVIEW_HEIGHT);
@@ -75,7 +75,7 @@
 }
   
 ####滚动效果的实现
--(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     if (scrollView == self.tableView) {
         CGFloat offSetY = scrollView.contentOffset.y;
@@ -98,7 +98,7 @@
         }
         
     }
-}
+  }
 
 
 
